@@ -1,0 +1,12 @@
+{% extends 'blog/post_list.html' %}
+  {% block body %}
+    WORK
+
+        {% for d in f %}
+            <br><a href="govorit" pk=d.id /> {{d.id}}</br>
+            {% if d.id == 2 %}
+                  <p>POII~~~</p>
+            {% endif %}
+        {% endfor %}
+
+  {% endblock  %}

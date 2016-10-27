@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <title>[f[</title>
+    <link rel="stylesheet" href="/static/bootstrap.css" />
+
+  </head>
+  <body>
+  <p><input type="number" size="3" name="num" min="1" max="3" value="1"></p>
+
+  <div>
+    <h1><a href="books">1st PAGE, so spicy</a></h1>
+    {% block body %}  {% endblock %}
+  </div>
+  </body>
+</html>
