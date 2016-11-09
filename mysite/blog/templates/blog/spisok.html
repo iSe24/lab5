@@ -1,0 +1,21 @@
+{% extends 'blog/shablon.html' %}
+{% block body1 %}
+{% endblock %}
+  {% block body %}
+    ШАБЛОНЫ ПОВСЮДУ
+    а ниже - инфа выведенная циклом
+        <table class="table table-striped">
+        {% for d in Text %}
+            <p class="text-center" style="height:30px; background:#c8e5bc; border: 3px solid #3e8f3e; border-radius: 10px;">
+                <a href="{% url 'govorit' pk=d.id %}" > {{d.author}} </a>
+            </p>
+            <div class="text-center" style="margin-left: 50px; height:30px; background: whitesmoke ;
+            outline: 2px solid #000;">{{d.text}}</div>
+
+            {% if d.id == 3 %}
+               <div class="text-center" style="margin-left: 50px; height:30px; background: whitesmoke ;">надо же - третий </div>
+            {% endif %}
+        </table>>
+
+        {% endfor %}
+  {% endblock  %}
